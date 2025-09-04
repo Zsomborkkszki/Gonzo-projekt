@@ -10,25 +10,46 @@
 
 <nav>
   <div class="logo-container">
-    <img src="../ikt 11a/SmallSquareLogoJpg.jpg" alt="PortfoLens logó" class="logo-img" />
+    <img src="../ikt_11a/SmallSquareLogoJpg.jpg" alt="PortfoLens logó" class="logo-img" />
     <span class="logo">PortfoLens</span>
   </div>
   <ul>
-    <li><a href="../ikt 11a/index.html">Kezdőlap</a></li>
-    <li><a href="../ikt 11a/about.html">Rólunk</a></li>
-    <li><a href="/contact">Kapcsolat</a></li>
+    <li><a href="../ikt_11a/index.html">Kezdőlap</a></li>
+    <li><a href="../ikt_11a/about.html">Rólunk</a></li>
+    <li><a href="../ikt_11a/contact.html">Kapcsolat</a></li>
   </ul>
 </nav>
 
 
   <main>
     <h1>Portfólió Feltöltése és Elemzése</h1>
-    <form action="/analyze" method="post" enctype="multipart/form-data">
-      <input type="file" name="portfolio_file" accept=".csv" required />
-      <button type="submit">Elemzés indítása</button>
+    <form action="../ikt_11a/analyze.html" method="post" enctype="multipart/form-data">
+      <input type="file" name="portfolio_file" accept=".txt" required />
+      <button type="submit" onclick="saveFile()">Elemzés indítása</button>
     </form>
+    <h1>Figyelem!</h1>
+    <p>
+      A feltöltési funkció jelenleg nem működik. Legyenek szívesek és a kapcsolatoknál lévő menüpontba küldeni a portfóliójukkal kapcsolatos adatokat!
+    </p>
   </main>
+  <script>
+    function saveFile() {
+      const fileInput = document.getElementsByName("portfolio_file");
+      const file = fileInput;
 
+      if (!file) {
+        alert("Nincs fájl kiválasztva!");
+        return;
+      }
+
+      const url = URL.createObjectURL(file);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = file.name; // eredeti néven menti le
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+  </script>
   <footer>
     &copy; 2025 PortfoLens. Minden jog fenntartva.
   </footer>
