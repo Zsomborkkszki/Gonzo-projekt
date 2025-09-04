@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <title>PortfoLens – Portfólió Elemző</title>
+</head>
+<body>
+
+<nav>
+  <div class="logo-container">
+    <img src="../ikt 11a/SmallSquareLogoJpg.jpg" alt="PortfoLens logó" class="logo-img" />
+    <span class="logo">PortfoLens</span>
+  </div>
+  <ul>
+    <li><a href="../ikt 11a/index.html">Kezdőlap</a></li>
+    <li><a href="../ikt 11a/about.html">Rólunk</a></li>
+    <li><a href="/contact">Kapcsolat</a></li>
+  </ul>
+</nav>
+
+
+  <main>
+    <h1>Portfólió Feltöltése és Elemzése</h1>
+    <form action="/analyze" method="post" enctype="multipart/form-data">
+      <input type="file" name="portfolio_file" accept=".csv" required />
+      <button type="submit">Elemzés indítása</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 PortfoLens. Minden jog fenntartva.
+  </footer>
+
+</body>
+</html>
