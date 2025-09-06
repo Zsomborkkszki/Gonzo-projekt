@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rólunk – PortfoLens</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      background-color: #283e4a;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      cursor: pointer;
+    }
+
+    .logo-img-placeholder {
+      width: 40px;
+      height: 40px;
+      background-color: #1abc9c;
+      border-radius: 6px;
+    }
+
+    .logo-text {
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      user-select: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #1abc9c;
+    }
+    .logo-img {
+    width: 50px;
+    height: 50x;
+    object-fit: contain;
+    }
+    main {
+      flex-grow: 1;
+      max-width: 800px;
+      margin: 3rem auto;
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      color: #283e4a;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+      text-align: justify;
+    }
+
+    footer {
+      background-color: #283e4a;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+      nav ul {
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='SmallSquareLogoJpg.jpg') }}" alt="PortfoLens logó" class="logo-img">
+      <span class="logo-text">PortfoLens</span>
+    </div>
+    <ul>
+      <li><a href="{{ url_for('index') }}">Kezdőlap</a></li>
+    <li><a href="{{ url_for('about') }}">Rólunk</a></li>
+    <li><a href="{{ url_for('contact') }}">Kapcsolat</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Rólunk</h1>
+    <p>
+      A PortfoLens egy innovatív online platform, amely lehetővé teszi a befektetők számára, hogy könnyedén feltöltsék és elemezzék portfóliójukat havi adatok alapján. Python alapú adatfeldolgozó motorunk segítségével precíz, gyors és részletes elemzéseket kínálunk, amelyek megkönnyítik a befektetési döntések meghozatalát.
+    </p>
+    <p>
+      Küldetésünk, hogy a pénzügyi adatokat érthetővé és átláthatóvá tegyük minden felhasználónk számára, akár kezdő, akár tapasztalt befektető. Weboldalunk felhasználóbarát kezelőfelülete lehetővé teszi, hogy egy kattintással feltöltsd portfóliódat, majd azonnal megkapd az elemzéseket, hozamokat és kockázati mutatókat.
+    </p>
+    <p>
+      A PortfoLens nem csupán egy egyszerű portfóliókezelő eszköz, hanem egy megbízható társ a befektetési stratégiád kialakításában, amely a legmodernebb Python technológiákat használja az adatfeldolgozáshoz és vizualizációhoz.
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2025 PortfoLens. Minden jog fenntartva.
+  </footer>
+
+</body>
+</html>

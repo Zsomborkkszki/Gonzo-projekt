@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Fájl eredménye</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav>
+  <div class="logo-container">
+    <img src="{{ url_for('static', filename='SmallSquareLogoJpg.jpg') }}" alt="PortfoLens logó" class="logo-img">
+    <span class="logo">PortfoLens</span>
+  </div>
+  <ul>
+    <li><a href="{{ url_for('index') }}">Kezdőlap</a></li>
+    <li><a href="{{ url_for('about') }}">Rólunk</a></li>
+    <li><a href="{{ url_for('contact') }}">Kapcsolat</a></li>
+  </ul>
+</nav>
+
+  <main>
+    <h1>📂 Feltöltött fájl: {{ filename }}</h1>
+    <h2>Tartalom:</h2>
+    <pre style="background:#f4f4f4; padding:1em; border-radius:8px;">{{ content }}</pre>
+
+    <h2>📊 Diagram:</h2>
+    {% if has_prev %}
+      <p>(Az aktuális hónap adatai az előző hónappal összehasonlítva)</p>
+    {% else %}
+      <p>(Ez az első feltöltött fájl, nincs összehasonlítás)</p>
+    {% endif %}
+    <img src="{{ chart_url }}" alt="Diagram az adatokból" style="max-width:100%; border:1px solid #ccc; border-radius:8px;">
+  </main>
+
+  <footer>
+    &copy; 2025 PortfoLens
+  </footer>
+</body>
+</html>
