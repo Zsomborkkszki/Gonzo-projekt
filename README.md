@@ -4,6 +4,8 @@
 
 2.A visual studio code-nak rendelkezni kell a flask könyvtárral és a  matplotlib könyvtárral
 
+  2.1.Ki kell törőlni a buffer.txt nevű fájlt az uploads mappából vagy a diagramm nem fog működni. 
+
 3. El kell indítani az APP.py nevű programot
 
 4.Be kell menni egy tetszőleges böngészőbe.
