@@ -1,0 +1,10 @@
+Bevétel: 200
+Kiadás: 100
+AMD: 50
+Intel: 1
+NVDIA: 5000
+TMC: 100
+BTC: 20
+ETC: 20
+OTP: 5000
+RHT: 9000
