@@ -1,5 +1,6 @@
 # Gonzo-projekt
 --------Használata---------
+
 1.Le kell tölteni mindent
 
 2.A visual studio code-nak rendelkezni kell a flask könyvtárral és a  matplotlib könyvtárral
